@@ -16,7 +16,7 @@ export class ApiService {
     return this._httpClient.get<any>(`${this.APIEndpoint}/${url}`);
   }
 
-  makePostRequest(url: string, requestBody: any): any{
+  makePostRequest(url: string, requestBody: any):Observable <any>{
     return this._httpClient.post<any>(`${this.APIEndpoint}/${url}`, requestBody);
   }
 

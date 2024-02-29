@@ -1,10 +1,11 @@
 /******************* Auth API Endpoints ********************/
-export const register = 'api/register';
-export const login = 'api/login';
+export const register = 'register';
+export const login = 'login';
+export const logout = 'logout';
 
 
 /******************* User API Endpoints ********************/
-export const user = 'api/users';
+export const user = 'users';
 
 
 

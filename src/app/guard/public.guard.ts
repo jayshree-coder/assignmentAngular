@@ -16,6 +16,7 @@ export class PublicGuard {
     if (this._cookieService.get("_token")) {
       return false;
     } else {
+
       return true;
     }
   }

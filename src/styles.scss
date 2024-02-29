@@ -5,3 +5,27 @@
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+.container {
+    margin-top: 50px; 
+  }
+  
+  .card {
+    width: 100%;
+  }
+  
+  @media (min-width: 576px) {
+    .card {
+      max-width: 500px; 
+      margin: auto;
+    }
+  }
+  /* CSS */
+footer {
+    
+    bottom: 0;
+    width: 100%;
+    background-color: #f2f2f2; 
+    padding: 20px 0; 
+    text-align: center; 
+  }
+  

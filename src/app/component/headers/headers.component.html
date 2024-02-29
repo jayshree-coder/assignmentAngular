@@ -1,0 +1,30 @@
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Assignement</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/user/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/user/user-list" routerLinkActive="active">User List</a>
+        </li>
+       
+      </ul>
+      <div class="d-flex">
+        <img class="b-r-10" src="https://angular.pixelstrap.com/cuba/assets/images/dashboard-4/user.png" width="40" alt="">
+        <div class="media-body"><span>{{ user?.first_name + " " + user?.last_name }}</span></div>
+      </div>
+      <div class="mx-2"></div> 
+      <div class="d-flex">
+        <button type="button" (click)="logout()" class="btn btn-outline-dark">Logout</button>
+      </div>
+
+    </div>
+  </div>
+</nav>

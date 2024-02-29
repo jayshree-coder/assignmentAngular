@@ -11,15 +11,26 @@ import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component'; // Import the SignupComponent
 import { AuthInterceptor } from './config/auth.interceptor';
 import { CookieService } from 'ngx-cookie-service';
 import { AdminGuard } from './guard/admin.guard';
 import { PublicGuard } from './guard/public.guard';
-
+import {HeadersComponent} from './component/headers/headers.component';
+import {FooterComponent} from './component/footers/footer.component';
+import {DashboardComponent} from './pages/dashboard/dashboard.component';
+import { HomeComponent } from './pages/home/home.component';
+import { UserListsComponent } from './pages/user-lists/user-lists.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent,
+    HeadersComponent,
+    FooterComponent,
+    DashboardComponent,
+    HomeComponent,
+    UserListsComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +38,7 @@ import { PublicGuard } from './guard/public.guard';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule, 
     NgbModule,
     NgbNavModule,
     BrowserAnimationsModule,

@@ -13,9 +13,9 @@ export class AdminGuard {
 
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
     if (this._cookieService.get("_token")) {
+
       return true;
     } else {
-      this.router.navigate([ "/login" ]);
       return false;
     }
   }
