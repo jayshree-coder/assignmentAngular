@@ -93,7 +93,7 @@ export class UserListsComponent implements OnInit {
   {
     this.currentUser = this._cookieService.get('role');
     this.currentUserId = this._cookieService.get('_id');
-    console.log("getidddd>>>", this.currentUserId, )
+    console.log("getidddd>>>", this.currentUserId )
     if (this.currentUser !== 'admin') {
       this._toastrService.error('You do not have permission to perform this action.');
       return;

@@ -34,7 +34,7 @@ export class HeadersComponent implements OnInit {
     this._apiService.makePostRequest(logout,'')
     .subscribe(
       (response: any) => {
-        console.log('login successfully done', response);
+        this._toastrService.success("Logout successfully");
         this._cookieService.delete('_token', '/');
         this._cookieService.delete('role', '/');
         this._cookieService.delete('_id', '/');
