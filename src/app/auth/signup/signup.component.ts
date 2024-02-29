@@ -3,7 +3,7 @@ import {  FormControl,FormGroup,Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
 import { ApiService } from "../../services/api.service";
 import { ToastrService } from "ngx-toastr";
-import { register } from "src/app/config/endpoints";
+import { register, user } from "src/app/config/endpoints";
 @Component({
   selector: "app-signup",
   templateUrl: "./signup.component.html",
@@ -36,12 +36,12 @@ export class SignupComponent implements OnInit {
   onSubmit(): void {
     this.submitted = true;
     if (this.signupForm.invalid) return;
-    this._apiService.makePostRequest(register, this.signupForm.value)
+    this._apiService.makePostRequest(user, this.signupForm.value)
     .subscribe(
       (response: any) => {
         console.log('Registration successful', response);
-        this._toastrService.success("Registration successfully Done, Wait For Admin Approval To login");
-        this._router.navigate(['/']); // Adjust the route path as needed
+        this._toastrService.success("Registration successfully Done");
+        this._router.navigate(['/']); 
 
       },
       (error: any) => {
